@@ -9,8 +9,8 @@ var liveReload = null;
 
 var paths = {
 	html: [ "*.html", "views/**/*.html"],
-	scripts: ["*.js", "js/**/*.js"],
-	styles: ["css/**/*.css"]
+	scripts: ["*.js", "scripts/**/*.js"],
+	styles: ["styles/**/*.css"]
 };
 
 var startLiveReload = function() {
