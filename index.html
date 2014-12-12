@@ -32,11 +32,15 @@
 		width: 400px;
 		margin: auto;
 	}
-	video, canvas {
+	video, canvas, .me {
 		position: absolute;
 		box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.65);
 		top:70px;
 	}
+    .me.hide {
+        transition: opacity 0.5s ease;
+        opacity: 0;
+    }
   </style>
 </head>
 <body>
@@ -47,6 +51,7 @@
   <div class="container">
 	<video id="video" width="400" height="300" preload autoplay loop muted></video>
 	<canvas id="canvas" width="400" height="300"></canvas>
+    <img class='me' src='/images/andrew.png' style="width:400px; z-index:100">
   </div>
 
   <script src='scripts/VideoStache.js'></script>
@@ -55,6 +60,10 @@
   	var canvas = document.getElementById("canvas");
 	var stacheOverlay = new VideoStache(video, canvas);
 	stacheOverlay.init();
+    setTimeout(function (argument) {
+        var img = document.querySelector(".me");
+        img.classList.add("hide");
+    }, 2000)
   </script>
 
 </body>

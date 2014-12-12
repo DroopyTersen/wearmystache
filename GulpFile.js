@@ -58,8 +58,8 @@ var startExpress = function() {
 
 gulp.task("default", function() {
 	startExpress();
-	//startLiveReload();
-	//setupWatch();
+	startLiveReload();
+	setupWatch();
 	openBrowser();
 	console.log("Gulp is running");
 });
