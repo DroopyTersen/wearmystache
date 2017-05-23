@@ -3,68 +3,25 @@
 <head>
   <meta charset="utf-8">
   <title>WearMyStache</title>
-
-  <script src="lib/tracking-min.js"></script>
-  <script src="lib/data/face-min.js"></script>
-
-  <style>
-  	* {
-		margin: 0;
-		padding: 0;
-		font-family: Helvetica, Arial, sans-serif;
-	}
-	html{
-		background: #eee;
-	}
-	.header {
-		position: absolute;
-		width: 100%;
-		background: #2e2f33;
-		z-index: 2;
-		padding: .7em 0;
-		text-align: center;
-		color:#eee;
-	}
-	.header h1 {
-		font-weight: 100;
-	}
-	.container {
-		width: 400px;
-		margin: auto;
-	}
-	video, canvas, .me {
-		position: absolute;
-		box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.65);
-		top:70px;
-	}
-    .me.hide {
-        transition: opacity 0.5s ease;
-        opacity: 0;
-    }
-  </style>
+<link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css">
+<link rel="stylesheet" href="styles/site.css">
 </head>
 <body>
-  <div class="header">
-	<h1>Wear My Stache</h1>
-  </div>
-
-  <div class="container">
-	<video id="video" width="400" height="300" preload autoplay loop muted></video>
-	<canvas id="canvas" width="400" height="300"></canvas>
-    <img class='me' src='/images/andrew.png' style="width:400px; z-index:100">
-  </div>
-
-  <script src='scripts/VideoStache.js'></script>
-  <script>
-  	var video = document.getElementById("video")
-  	var canvas = document.getElementById("canvas");
-	var stacheOverlay = new VideoStache(video, canvas);
-	stacheOverlay.init();
-    setTimeout(function (argument) {
-        var img = document.querySelector(".me");
-        img.classList.add("hide");
-    }, 2000)
-  </script>
-
+	<header>
+		<h1 class='title'>Wear My Stache</h1>
+		<h3 class='subtitle'>Nice mustache huh? Let's see what it'd look like on your image</h3>
+	</header>
+	<section class='main-content'>
+		<form class='pure-form pure-form-aligned'>
+        <input id="url-input" type="text" placeholder="Image Url">
+		</form>
+		<div id='image-container'>
+			<img id='background-image' src='images/andrew.png'>
+	</section>
+	<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+	<script src='scripts/app.js'></script>
 </body>
 </html>

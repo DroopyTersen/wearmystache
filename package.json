@@ -1,25 +1,16 @@
 {
-  "name": "droopy-static",
-  "version": "0.0.0",
-  "description": "Empty project template for a static (clientside only) website",
+  "name": "wearmystache",
+  "version": "2.0.0",
+  "description": "Uses Azure Cognitive Services to put my mustache over a face",
+  "main": "index.html",
   "repository": {
     "type": "git",
-    "url": "https://github.com/DroopyTersen/droopy-static"
+    "url": "git+https://github.com/droopytersen/wearmystache.git"
   },
-  "keywords": [
-    "droopy"
-  ],
   "author": "Andrew Petersen",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/DroopyTersen/droopy-static/issues"
+    "url": "https://github.com/droopytersen/wearmystache/issues"
   },
-  "homepage": "https://github.com/DroopyTersen/droopy-static",
-  "devDependencies": {
-    "connect-livereload": "~0.3.2",
-    "optimist": "~0.6.1",
-    "tiny-lr": "0.0.5",
-    "gulp-open": "~0.2.8",
-    "gulp": "~3.5.2",
-    "express": "~3.4.8"
-  }
+  "homepage": "https://wearmystache.azurewebsites.net"
 }

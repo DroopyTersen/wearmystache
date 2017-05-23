@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  text-align: center;
+  height: 100%;
+}
+.title {
+  font-size: 1.9em;
+  font-weight: 100;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin:10px;
+}
+.subtitle {
+  font-weight: 100;
+  letter-spacing: 1px;
+  margin: 5px;
+}
+form {
+  width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+#url-input {
+  width: 400px;
+}
+#image-container {
+  position: relative;
+  width: 100%;
+}
+#background-image {
+  /*position: absolute;*/
+  /*top: 0;*/
+  /*left: 0;*/
+}
+.stache-image {
+    position: absolute;
+}
